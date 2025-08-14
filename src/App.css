@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 12px;
+  padding-bottom: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+.header {
+  background: linear-gradient(to right, #2CBF90, #145a32);
+  padding: 20px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.header h1 {
+  color: white;
+  margin: 0;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #26513D;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.input-section button {
+  padding: 12px 18px;
+  background: linear-gradient(to right, #2CBF90, #26513D);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 20px 10px;
+}
+
+.filter-buttons button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #26513D;
+  background: white;
+  cursor: pointer;
+}
+
+.filter-buttons .active {
+  background: linear-gradient(to right, #2CBF90, #145a32);
+  color: white;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  border: 1px solid #26513D;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.task-list li span {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.task-list li.completed span:first-of-type {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-list input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+.task-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon.star {
+  margin-left: auto;
+}
+
+.icon.delete {
+  margin-left: 10px;
+}
+
+.empty-message {
+  text-align: center;
+  color: gray;
+  font-style: italic;
+  padding: 20px 0;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 20px;
+    padding-bottom: 15px;
+  }
+
+  .input-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-section input {
+    width: 100%; /* penuh sesuai container */
+    min-width: 0; /* override min-width sebelumnya */
+    box-sizing: border-box; /* hitung padding & border */
+  }
+
+  .input-section button {
+    width: 100%;
+  }
+
+  .filter-buttons {
+    justify-content: center;
+  }
+}

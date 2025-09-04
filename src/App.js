@@ -100,7 +100,7 @@ function App() {
     <div className="container">
       {/* Header */}
       <div className="header">
-        <h1>Todo List</h1>
+        <h1>Elvin Kontol</h1>
       </div>
 
       {/* Input Section */}
